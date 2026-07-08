@@ -5,72 +5,89 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Domain Particulars — So the business runs without you</title>
 <meta name="description" content="Domain Particulars helps East Texas business owners document what's in their head — so the business can run, and be sold, without them.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
   :root {
-    --slate: #3B4A6B;
-    --slate-dark: #2C3850;
-    --paper: #F6F5F1;
+    --midnight: #0D1B2A;
+    --parchment: #E8E2D4;
+    --scholar: #23395B;
     --ink: #1D2025;
-    --brass: #A8762E;
-    --muted: #5d6470;
-    --border: #ddd9d0;
+    --slate-muted: #6B7280;
+    --gold: #B08D4F;
+    --border: #d3ccba;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: var(--paper); color: var(--ink);
+    background: var(--parchment); color: var(--ink);
     -webkit-font-smoothing: antialiased;
     line-height: 1.65;
   }
   h1, h2, h3, .serif { font-family: Georgia, 'Times New Roman', serif; }
+  h2 {
+    font-size: 24px; color: var(--scholar); margin-bottom: 16px;
+    font-variant: small-caps; letter-spacing: 0.06em; font-weight: bold;
+  }
   .wrap { max-width: 760px; margin: 0 auto; padding: 0 22px; }
 
-  header { background: var(--slate-dark); color: #fff; padding: 64px 0 58px; }
-  header h1 { font-size: 40px; font-weight: bold; letter-spacing: 0.3px; line-height: 1.15; }
-  header .tagline { font-size: 21px; font-style: italic; color: #c8cfdf; margin-top: 10px; font-family: Georgia, serif; }
-  header .rule { width: 64px; height: 3px; background: var(--brass); margin: 22px 0; }
-  header .promise { font-size: 17px; max-width: 560px; color: #e6e9f0; }
+  header { background: var(--midnight); color: var(--parchment); padding: 58px 0 54px; }
+  header .mark { width: 84px; height: 84px; margin-bottom: 20px; display: block; }
+  header h1 {
+    font-size: 34px; font-weight: bold; line-height: 1.2;
+    text-transform: uppercase; letter-spacing: 0.14em;
+  }
+  header .tagline { font-size: 21px; font-style: italic; color: #cfc9ba; margin-top: 10px; font-family: Georgia, serif; }
+  header .rule { width: 64px; height: 2px; background: var(--gold); margin: 22px 0; }
+  header .promise { font-size: 17px; max-width: 560px; color: #ddd7c8; }
 
   section { padding: 52px 0; }
   section + section { border-top: 1px solid var(--border); }
-  h2 { font-size: 26px; color: var(--slate-dark); margin-bottom: 16px; }
   p { margin-bottom: 14px; max-width: 620px; }
-  .muted { color: var(--muted); }
+  .muted { color: var(--slate-muted); }
 
   .steps { list-style: none; margin-top: 8px; }
   .steps li { display: flex; gap: 16px; margin-bottom: 18px; max-width: 620px; }
   .steps .n {
     flex: 0 0 34px; height: 34px; border-radius: 50%;
-    background: var(--slate); color: #fff; font-family: Georgia, serif;
+    background: var(--scholar); color: var(--parchment); font-family: Georgia, serif;
     font-weight: bold; font-size: 17px; display: flex; align-items: center; justify-content: center;
     margin-top: 2px;
   }
-  .steps b { color: var(--slate-dark); }
+  .steps b { color: var(--scholar); }
+
+  .svc { list-style: none; margin-top: 6px; max-width: 620px; }
+  .svc li { padding: 16px 0; border-bottom: 1px solid var(--border); }
+  .svc li:last-child { border-bottom: none; }
+  .svc b { font-family: Georgia, serif; color: var(--scholar); }
+  .svc .get { font-size: 15px; color: var(--slate-muted); margin-top: 4px; margin-bottom: 0; }
+  .svc .get i { font-family: Georgia, serif; }
 
   .fit { list-style: none; margin-top: 6px; max-width: 620px; }
   .fit li { padding: 10px 0 10px 26px; position: relative; border-bottom: 1px solid var(--border); }
   .fit li:last-child { border-bottom: none; }
-  .fit li::before { content: ""; position: absolute; left: 4px; top: 19px; width: 9px; height: 9px; background: var(--brass); border-radius: 50%; }
+  .fit li::before { content: ""; position: absolute; left: 4px; top: 19px; width: 9px; height: 9px; background: var(--scholar); border-radius: 50%; }
 
-  .cta { background: var(--slate-dark); color: #fff; text-align: center; padding: 56px 0; }
-  .cta h2 { color: #fff; }
-  .cta p { margin: 10px auto 22px; color: #d7dce7; max-width: 520px; }
-  .cta .phone {
-    display: inline-block; font-family: Georgia, serif; font-size: 26px; font-weight: bold;
-    color: #fff; text-decoration: none; border: 2px solid var(--brass);
-    border-radius: 8px; padding: 12px 30px;
+  .cta { background: var(--midnight); color: var(--parchment); text-align: center; padding: 56px 0; }
+  .cta h2 { color: var(--parchment); }
+  .cta p { margin: 10px auto 22px; color: #d5cfc0; max-width: 520px; }
+  .cta .btn {
+    display: inline-block; font-family: Georgia, serif; font-size: 21px; font-weight: bold;
+    color: var(--parchment); text-decoration: none; border: 2px solid var(--gold);
+    border-radius: 8px; padding: 12px 26px; margin: 6px 8px;
   }
-  .cta .phone:hover { background: rgba(168,118,46,0.18); }
-  .cta .sub { font-size: 14px; color: #aeb6c6; margin-top: 14px; }
+  .cta .btn:hover { background: rgba(176,141,79,0.16); }
+  .cta .sub { font-size: 14px; color: #a89f8c; margin-top: 14px; }
 
-  footer { text-align: center; padding: 26px 16px 34px; font-size: 13px; color: var(--muted); }
+  footer { text-align: center; padding: 26px 16px 34px; font-size: 13px; color: var(--slate-muted); }
 
   @media (max-width: 560px) {
-    header { padding: 46px 0 42px; }
-    header h1 { font-size: 31px; }
+    header { padding: 44px 0 40px; }
+    header .mark { width: 68px; height: 68px; }
+    header h1 { font-size: 24px; letter-spacing: 0.11em; }
     header .tagline { font-size: 18px; }
     section { padding: 40px 0; }
-    h2 { font-size: 22px; }
+    h2 { font-size: 21px; }
+    .cta .btn { font-size: 18px; padding: 11px 20px; margin: 6px 4px; }
   }
 </style>
 </head>
@@ -78,6 +95,52 @@
 
 <header>
   <div class="wrap">
+    <svg class="mark" viewBox="0 0 120 120" role="img" aria-label="Domain Particulars mark" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(60,60)">
+        <g stroke="#E8E2D4" fill="none">
+          <circle r="48" stroke-width="1.1"/>
+          <g stroke-width="1.1">
+            <line x1="0" y1="-52" x2="0" y2="-56"/>
+            <line x1="0" y1="-52" x2="0" y2="-56" transform="rotate(22.5)"/>
+            <line x1="0" y1="-52" x2="0" y2="-56" transform="rotate(45)"/>
+            <line x1="0" y1="-52" x2="0" y2="-56" transform="rotate(67.5)"/>
+            <line x1="0" y1="-52" x2="0" y2="-56" transform="rotate(90)"/>
+            <line x1="0" y1="-52" x2="0" y2="-56" transform="rotate(112.5)"/>
+            <line x1="0" y1="-52" x2="0" y2="-56" transform="rotate(135)"/>
+            <line x1="0" y1="-52" x2="0" y2="-56" transform="rotate(157.5)"/>
+            <line x1="0" y1="-52" x2="0" y2="-56" transform="rotate(180)"/>
+            <line x1="0" y1="-52" x2="0" y2="-56" transform="rotate(202.5)"/>
+            <line x1="0" y1="-52" x2="0" y2="-56" transform="rotate(225)"/>
+            <line x1="0" y1="-52" x2="0" y2="-56" transform="rotate(247.5)"/>
+            <line x1="0" y1="-52" x2="0" y2="-56" transform="rotate(270)"/>
+            <line x1="0" y1="-52" x2="0" y2="-56" transform="rotate(292.5)"/>
+            <line x1="0" y1="-52" x2="0" y2="-56" transform="rotate(315)"/>
+            <line x1="0" y1="-52" x2="0" y2="-56" transform="rotate(337.5)"/>
+          </g>
+          <line x1="-48" y1="0" x2="48" y2="0" stroke-width="0.9"/>
+          <line x1="0" y1="-48" x2="0" y2="48" stroke-width="0.9"/>
+          <line x1="-24" y1="-24" x2="24" y2="24" stroke-width="0.9"/>
+          <line x1="-24" y1="24" x2="24" y2="-24" stroke-width="0.9"/>
+          <polygon points="0,-48 48,0 0,48 -48,0" stroke-width="1.4"/>
+          <polygon points="-33.94,-33.94 33.94,-33.94 33.94,33.94 -33.94,33.94" stroke-width="1.4"/>
+        </g>
+        <g fill="#E8E2D4">
+          <circle cx="0" cy="-48" r="2.2"/>
+          <circle cx="33.94" cy="-33.94" r="2.2"/>
+          <circle cx="48" cy="0" r="2.2"/>
+          <circle cx="33.94" cy="33.94" r="2.2"/>
+          <circle cx="0" cy="48" r="2.2"/>
+          <circle cx="-33.94" cy="33.94" r="2.2"/>
+          <circle cx="-48" cy="0" r="2.2"/>
+          <circle cx="-33.94" cy="-33.94" r="2.2"/>
+          <circle cx="24" cy="-24" r="1.5"/>
+          <circle cx="24" cy="24" r="1.5"/>
+          <circle cx="-24" cy="24" r="1.5"/>
+          <circle cx="-24" cy="-24" r="1.5"/>
+          <circle cx="0" cy="0" r="2.6"/>
+        </g>
+      </g>
+    </svg>
     <h1>Domain Particulars</h1>
     <p class="tagline">So the business runs without you.</p>
     <div class="rule"></div>
@@ -121,6 +184,33 @@
 
 <section>
   <div class="wrap">
+    <h2>What we do</h2>
+    <p>Getting the business out of your head is the core of the work. But not every problem
+    waits for an exit plan — we take on the immediate ones, too. Scoped in writing, delivered
+    on paper.</p>
+    <ul class="svc">
+      <li><b>IT &amp; infrastructure assessment.</b> A plain-English read on the systems your
+      business runs on: what's solid, what's fragile, and what it would take to fix.
+      <p class="get"><i>What you get:</i> a written assessment with a prioritized list — no sales pitch attached to it.</p></li>
+      <li><b>Security assessment.</b> Where the business is exposed — accounts, access, backups,
+      the one password everyone knows — and what to fix first.
+      <p class="get"><i>What you get:</i> a prioritized fix list an owner can hand to whoever does the fixing.</p></li>
+      <li><b>CMMC Level 2 readiness.</b> For shops that sell into defense supply chains: a gap
+      assessment against the requirements and a realistic path to compliance.
+      <p class="get"><i>What you get:</i> a written gap report and a step-by-step readiness plan.</p></li>
+      <li><b>Business-systems integration.</b> Making the tools you already pay for actually work
+      together — and documenting the process as it's built, so it isn't trapped in anyone's head.
+      <p class="get"><i>What you get:</i> working connections between your systems, plus the written procedure for running them.</p></li>
+    </ul>
+    <p class="muted" style="margin-top:18px;">Every engagement starts with a fixed scope, agreed in
+    writing before any work begins. Larger work is staged, and each stage ends with a deliverable
+    in your hands and a go/no-go decision that's yours to make. No open-ended hourly meters, no
+    surprises on the invoice.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
     <h2>Who this is for</h2>
     <ul class="fit">
       <li>Owner-operated businesses — shops, contractors, service firms — with roughly 5 to 20 employees.</li>
@@ -145,12 +235,13 @@
   <div class="wrap">
     <h2>Start with the conversation</h2>
     <p>Forty-five minutes, seven questions, one page back. You'll know where you stand.</p>
-    <a class="phone" href="tel:+19036316979">903&#8209;631&#8209;6979</a>
-    <p class="sub">Call or text Bryan directly.</p>
+    <a class="btn" href="tel:+19036316979">903&#8209;631&#8209;6979</a>
+    <a class="btn" href="mailto:intake@domainparticulars.com?subject=Inquiry%20%E2%80%94%20Domain%20Particulars">Email&nbsp;us</a>
+    <p class="sub">Call, text, or email — it starts with a conversation.</p>
   </div>
 </div>
 
-<footer>&copy; 2026 Domain Particulars, LLC &middot; Longview, Texas</footer>
+<footer>&copy; 2026 Domain Particulars, LLC and Kernel and Root, LLC &middot; Longview, Texas</footer>
 
 </body>
 </html>
