@@ -1,51 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Domain Particulars</title>
-<meta name="description" content="Domain Particulars — coming soon.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Domain Particulars — Particular solutions for your business domain</title>
+<meta name="description" content="Domain Particulars puts the new tools to work inside small East Texas businesses — AI in real workflows, IT and security done right, and the knowledge in your head captured so the business runs without you. Longview, Texas.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --accent: #3b4a6b;
-    --accent-dark: #2c3850;
-    --bg: #f6f7f8;
-    --card: #ffffff;
-    --border: #e3e5e8;
-    --text: #1d2025;
-    --muted: #687078;
+  :root{
+    --bone:#F2EDE3; --graphite:#22252A; --orange:#E8622C;
+    --steel:#5A6B7C; --khaki:#C9BEA6; --khaki-line:#DCD3C0;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: var(--bg); color: var(--text);
-    -webkit-font-smoothing: antialiased;
-    min-height: 100vh; display: flex; flex-direction: column;
-  }
-  header { background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%); color: #fff; padding: 34px 20px 28px; text-align: center; }
-  header h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.02em; }
-  header p { font-size: 14px; opacity: 0.85; margin-top: 6px; }
-  main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 16px; }
-  .card {
-    background: var(--card); border: 1px solid var(--border); border-left: 5px solid var(--accent);
-    border-radius: 12px; padding: 36px 40px; max-width: 460px; text-align: center;
-  }
-  .card h2 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
-  .card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
-  footer { text-align: center; padding: 22px 16px 28px; font-size: 12px; color: var(--muted); }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bone);color:var(--graphite);
+       font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px}
+  section{padding:58px 0}
+  h2{font-family:Rockwell,"Roboto Slab",Georgia,serif;font-weight:700;
+     font-size:30px;line-height:1.2;margin-bottom:18px}
+  h3{font-family:Rockwell,"Roboto Slab",Georgia,serif;font-weight:700;
+     font-size:19px;margin:22px 0 6px}
+  p{max-width:64ch;margin:10px 0}
+  .muted{color:var(--steel)}
+  .rule-top{border-top:1px solid var(--khaki-line)}
+
+  /* header band */
+  header{background:var(--graphite);color:var(--bone);padding:56px 0 64px}
+  .brandrow{display:flex;align-items:center;gap:16px;margin-bottom:44px}
+  .brandrow svg{flex:0 0 auto}
+  .wordmark{font-family:Rockwell,"Roboto Slab",Georgia,serif;font-weight:700;
+     font-size:22px;letter-spacing:.1em}
+  .place{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:11px;
+     letter-spacing:.32em;color:var(--khaki);margin-top:4px}
+  h1{font-family:Rockwell,"Roboto Slab",Georgia,serif;font-weight:700;
+     font-size:clamp(34px,5.4vw,50px);line-height:1.12;max-width:18ch}
+  .lead{font-size:20px;line-height:1.5;margin-top:20px;max-width:52ch;color:#EAE5D9}
+  .agnostic{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:13px;
+     color:var(--khaki);margin-top:22px;max-width:60ch;line-height:1.7}
+  .cta-row{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:13px 22px;border-radius:5px;font-weight:600;
+       font-size:15.5px;text-decoration:none}
+  .btn-orange{background:var(--orange);color:#fff}
+  .btn-ghost{border:1.5px solid var(--khaki);color:var(--bone)}
+
+  /* what we do */
+  .rungs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+         gap:18px;margin-top:26px}
+  .rung{border:1px solid var(--khaki);border-radius:8px;padding:22px;background:rgba(255,255,255,.35)}
+  .rung .k{font-family:ui-monospace,Menlo,monospace;font-size:11px;
+     letter-spacing:.22em;color:var(--orange);margin-bottom:8px}
+  .rung h3{margin:0 0 8px;font-size:20px}
+  .rung p{font-size:15px;margin:6px 0}
+  .rung ul{padding-left:18px;font-size:15px;margin-top:8px}
+  .rung li{margin:4px 0}
+
+  /* proof */
+  .proof{background:#fff;border:1px solid var(--khaki-line);border-left:6px solid var(--orange);
+         border-radius:8px;padding:26px 28px;margin-top:24px}
+  .measured{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:13.5px;
+     color:var(--steel);margin-top:14px;letter-spacing:.02em}
+
+  /* steps */
+  ol.steps{counter-reset:s;list-style:none;margin-top:20px}
+  ol.steps li{position:relative;padding:0 0 18px 58px;counter-increment:s;max-width:64ch}
+  ol.steps li::before{content:counter(s);position:absolute;left:0;top:0;
+     width:38px;height:38px;border:2px solid var(--graphite);border-radius:50%;
+     display:flex;align-items:center;justify-content:center;
+     font-family:Rockwell,"Roboto Slab",Georgia,serif;font-weight:700;font-size:17px}
+  ol.steps b{font-family:Rockwell,"Roboto Slab",Georgia,serif}
+
+  /* CTA band */
+  .cta-band{background:var(--graphite);color:var(--bone)}
+  .cta-band h2{color:var(--bone)}
+  .cta-band p{color:#EAE5D9}
+
+  footer{padding:26px 0 40px;font-size:13.5px;color:var(--steel);text-align:center}
+  @media(max-width:560px){ section{padding:44px 0} }
 </style>
 </head>
 <body>
-  <header>
-    <h1>Domain Particulars</h1>
-    <p>Coming soon</p>
-  </header>
-  <main>
-    <div class="card">
-      <h2>The particulars are coming together.</h2>
-      <p>This site is brand new. Check back soon.</p>
+
+<header>
+  <div class="wrap">
+    <div class="brandrow">
+      <svg viewBox="0 0 120 120" width="56" height="56" aria-hidden="true"><circle cx="60" cy="60" r="34" fill="none" stroke="#F2EDE3" stroke-width="6"/><line x1="60" y1="4" x2="60" y2="16" stroke="#F2EDE3" stroke-width="6"/><line x1="60" y1="104" x2="60" y2="116" stroke="#F2EDE3" stroke-width="6"/><line x1="4" y1="60" x2="16" y2="60" stroke="#F2EDE3" stroke-width="6"/><line x1="104" y1="60" x2="116" y2="60" stroke="#F2EDE3" stroke-width="6"/><circle cx="60" cy="60" r="9" fill="#E8622C"/></svg>
+      <div>
+        <div class="wordmark">DOMAIN PARTICULARS</div>
+        <div class="place">LONGVIEW, TEXAS</div>
+      </div>
     </div>
-  </main>
-  <footer>&copy; 2026 Domain Particulars, LLC</footer>
+    <h1>Real work, precisely improved.</h1>
+    <p class="lead">Particular solutions for your business domain. Your workflows, your rules — current problems solved.</p>
+    <p class="agnostic">We are not affiliated with, certified by, or committed to any AI vendor. We use whatever tool solves your problem — and we'll tell you when the answer is "none of them."</p>
+    <div class="cta-row">
+      <a class="btn btn-orange" href="tel:+19036316979">Call or text 903‑631‑6979</a>
+      <a class="btn btn-ghost" href="mailto:intake@domainparticulars.com">Email us</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>What we do</h2>
+    <p>Yes, it's AI — the new generation of tools that can read, write, calculate, and connect the systems you already own. No, you don't need to understand it. That's what you'd be paying for. We sit down with the people who do the work, learn how the work actually happens, and build the tools around it — and you stay the one deciding what they do.</p>
+    <div class="rungs">
+      <div class="rung">
+        <div class="k">LEARN</div>
+        <h3>Working sessions</h3>
+        <p>Not classes — sessions inside your actual work: your files, your permits, your inbox. You bring a real task; you leave with it improved and a tool you keep.</p>
+        <ul>
+          <li>One-on-one or small group</li>
+          <li>Private owner's orientation — start here</li>
+          <li>Seminars for larger teams</li>
+        </ul>
+      </div>
+      <div class="rung">
+        <div class="k">BUILD</div>
+        <h3>Assessments &amp; workflow discovery</h3>
+        <p>Staged engagements with a written deliverable and a stop/continue decision at every gate.</p>
+        <ul>
+          <li>Workflow discovery, one employee at a time — measured time saved, role recommendation, roadmap</li>
+          <li>IT &amp; infrastructure and security assessments</li>
+          <li>CMMC Level 2 readiness for defense suppliers</li>
+          <li>Business-systems integration</li>
+        </ul>
+      </div>
+      <div class="rung">
+        <div class="k">KEEP</div>
+        <h3>Ongoing support</h3>
+        <p>The tools change monthly. Watching them is our job so it doesn't have to be yours.</p>
+        <ul>
+          <li>Monthly working sessions and plain-English alerts</li>
+          <li>Priority support and shipped improvements</li>
+          <li>An embedded weekly presence — a fractional technology lead without the headcount</li>
+        </ul>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:22px">Every engagement is fixed-scope, agreed in writing, priced on a one-page rate sheet we hand you before any work begins. No open-ended hourly meters.</p>
+  </div>
+</section>
+
+<section class="rule-top">
+  <div class="wrap">
+    <h2>Proof, not promises</h2>
+    <div class="proof">
+      <p>An environmental compliance firm in Longview had a reporting workflow everyone dreaded: material usage recorded in grams across dozens of employees, hand-converted to pounds per hour and tons per year, with unit-conversion errors slipping past two layers of human checking.</p>
+      <p>From a four-minute conversation about that problem, we built a working tracker.</p>
+      <p class="measured">MEASURED: 117 formulas · 0 errors · built from one conversation</p>
+      <p style="margin-top:14px">That's what these tools do when someone builds them around <em>your</em> workflow — and you stay the one deciding what they do.</p>
+    </div>
+  </div>
+</section>
+
+<section class="rule-top">
+  <div class="wrap">
+    <h2>How we work</h2>
+    <ol class="steps">
+      <li><b>Start with one problem.</b> Bring the thing that eats your afternoons. A working session or a short assessment — small, fixed price, real result.</li>
+      <li><b>Measure before and after.</b> We map how the work happens today, build the improved version with your people driving, and put the numbers in writing.</li>
+      <li><b>Decide at every gate.</b> Continue, or stop and keep everything. You are never more than one stage deep.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="rule-top">
+  <div class="wrap">
+    <h2>If you're skeptical, you're our kind of owner</h2>
+    <p>Plenty of what's sold under the letters "A" and "I" deserves your skepticism. We don't sell software, we don't sell subscriptions to someone else's platform, and we won't tell you a robot is about to run your shop.</p>
+    <p>What we will do is sit at your desk, take one workflow you already know is painful, and improve it in front of you — measured, in plain English, with you making every call. If the numbers don't hold up in your shop, you stop. You'll have lost a week, not a year.</p>
+    <p>And if what you really want is the knowledge in your head captured — so the business can run, and one day be sold, without you — that's our founding craft. Ask about the Exit Readiness Conversation: forty-five minutes, seven questions, a straight answer.</p>
+  </div>
+</section>
+
+<section class="rule-top">
+  <div class="wrap">
+    <h2>Why "Domain Particulars"</h2>
+    <p>Every business runs on its <em>domain particulars</em> — the specific rules, vocabulary, judgment calls, and relationships that make it yours. Generic advice ignores them. We start there.</p>
+    <p>Founded and run by Bryan Silverthorne in Longview, Texas. East Texas first: Longview, Tyler, Marshall, Kilgore, and the surrounding area — on site, at your place of business.</p>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Start with one problem</h2>
+    <p>Call, text, or email. Tell us the thing that eats your afternoons — we'll tell you, plainly, whether we can help and what it would cost.</p>
+    <div class="cta-row">
+      <a class="btn btn-orange" href="tel:+19036316979">Call or text 903‑631‑6979</a>
+      <a class="btn btn-ghost" href="mailto:intake@domainparticulars.com">intake@domainparticulars.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Domain Particulars, LLC · Longview, Texas
+</footer>
+
 </body>
 </html>
